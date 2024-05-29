@@ -1,8 +1,26 @@
+:root{
+
+    --white-color:#FFF;
+    --black-color:#000;
+    --card-header-initial-color:#343a40;
+    --body-color:var(--white-color);
+    --body-backround:#303030;
+    --body-font-size:1.2rem;
+    --body-font:"Calibri",sans-serif;
+
+    --card-header-background:var(--pink);
+    --card-bottom-content:var(--teal);
+    --card-body-font-size:1.25rem;
+    --card-header-title-font-size:1.85rem;
+    --toggle-favoris-color:yellow;
+
+}
+
 body{
-    background-color: #303030;
-    font-family: "Calibri";
-    font-size: 1.2rem;
-    color: white;
+    background-color: var(--body-backround);
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
+    color: var(--body-color);
 }
 
 .container{
@@ -15,41 +33,77 @@ h1{
     text-align: center;
 }
 
-@media screen and (max-width: 780px){
-    body{
-        font-size: 1.4rem;
-    }
+/* List Container */
+#articles-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.article{
+.article, .article .card-img-top{
     border: none;
 }
 
 .article .card-header{
-    background-color: #343a40;
+    --op:.25;
+    background-color: var(--card-header-background);
+    box-shadow: 2px 2px 4px rgba(0,0,0,var(--op));
+}
 
+.article .column {
+    --layout:column;
+    /* display:flex;
+    flex-direction: var(--layout); */
 }
 
 .article .card-body{
-    background-color: rgba(0,0,0,0.4);
+    /* --op:.4; */
+    /* background-color: rgba(0,0,0,var(--op)); */
+    background-color:var(--card-bottom-content);
 }
 
-.article .publication-date{
+.article .card-title {
+    align-items: center;
+    font-size:var(--card-header-title-font-size);
+}
+
+.article .publication-date {
+    font-size:var(--card-body-font-size);
     text-align: right;
 }
 
+.article .card-text {
+    text-align: center;
+}
+
+.article .card-body {
+    font-size:var(--card-body-font-size);
+}
+
 .article .addFavorite{
-    font-size: 1.4rem;
     position: absolute;
     top: 80px;
     right: 10px;
+    font-size: 1.4rem;
 }
 
 .article .addFavorite .far{
-    color: rgba(0,0,0,0.2);
+    --op:.2;
+    color: rgba(0,0,0,var(--op));
 }
 
 .article .addFavorite:hover{
-    color: yellow;
+    color: var(--toggle-favoris-color);
     cursor: pointer;
+}
+
+
+/* MEDIA QUERIES    */
+@media screen and (max-width: 780px){
+
+    :root {
+        --body-font-size:1.4rem;
+    }
+
 }
