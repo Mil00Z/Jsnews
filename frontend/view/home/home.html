@@ -14,40 +14,115 @@
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="../home/home.html">Javanews</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<body class="home">
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="../home/home.html">Les derniers articles</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav my-2 my-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="../favorites/favorites.html" title="Mes favoris"><i class="fas fa-star"></i></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="../contact/contact.html" title="Contact"><i class="fas fa-envelope"></i></a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="../home/home.html">Javanews</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../home/home.html">Les derniers articles</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav my-2 my-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../favorites/favorites.html" title="Mes favoris"><i class="fas fa-star"></i></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../contact/contact.html" title="Contact"><i class="fas fa-envelope"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <nav class="navbar fixed-bottom navbar-dark bg-dark">
-        <span class="navbar-text">
-            @copyrights Javanews 2021-2100
-        </span>
-    </nav>
-
-    <div class="container">
+    <main class="container">
         <h1>Les derniers articles</h1>
-    </div>
+        <div id="articles-container">
+
+            <div class="col-6 mt-5">
+                <div class="card article column">
+                    <div class="card-header ">
+                        <h5 class="card-title d-flex justify-content-between">{{ Titre }}<span class="publication-date">{{ date de publication }}</span></h5>
+                    </div>
+                    <img src="{{ image }}" class="card-img-top">
+                    <span class="fa-stack fa-2x addFavorite">
+                        <i class="fas fa-star fa-stack-1x"></i>
+                        <i class="far fa-star fa-stack-1x"></i>
+                    </span>
+                    <div class="card-body">
+                        <p class="card-text">{{ Contenu }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 mt-5">
+                <div class="card article">
+                    <div class="card-header ">
+                        <h5 class="card-title d-flex justify-content-between">{{ Titre }}<span class="publication-date">{{ date de publication }}</span></h5>
+                    </div>
+                    <img src="{{ image }}" class="card-img-top">
+                    <span class="fa-stack fa-2x addFavorite">
+                        <i class="fas fa-star fa-stack-1x"></i>
+                        <i class="far fa-star fa-stack-1x"></i>
+                    </span>
+                    <div class="card-body">
+                        <p class="card-text">{{ Contenu }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 mt-5">
+                <div class="card article">
+                    <div class="card-header ">
+                        <h5 class="card-title d-flex justify-content-between">{{ Titre }}<span class="publication-date">{{ date de publication }}</span></h5>
+                    </div>
+                    <img src="{{ image }}" class="card-img-top">
+                    <span class="fa-stack fa-2x addFavorite">
+                        <i class="fas fa-star fa-stack-1x"></i>
+                        <i class="far fa-star fa-stack-1x"></i>
+                    </span>
+                    <div class="card-body">
+                        <p class="card-text">{{ Contenu }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 mt-5">
+                <div class="card article">
+                    <div class="card-header ">
+                        <h5 class="card-title d-flex justify-content-between">{{ Titre }}<span class="publication-date">{{ date de publication }}</span></h5>
+                    </div>
+                    <img src="{{ image }}" class="card-img-top">
+                    <span class="fa-stack fa-2x addFavorite">
+                        <i class="fas fa-star fa-stack-1x"></i>
+                        <i class="far fa-star fa-stack-1x"></i>
+                    </span>
+                    <div class="card-body">
+                        <p class="card-text">{{ Contenu }}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    <footer>
+        <nav class="navbar fixed-bottom navbar-dark bg-dark">
+            <span class="navbar-text">
+                @copyrights Javanews 2021-2024 by <a href="https://github.com/Mil00Z">MilooZ</a>
+            </span>
+        </nav>
+    </footer>
+    
+
+   
 </body>
 
 </html>
