@@ -1,2 +1,2 @@
-# papernews
-ExerciseFrom OCR JS - Path
+# Jsnews
+ExerciseFrom OCR JS/React - Path - Project 4
