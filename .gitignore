@@ -2,4 +2,4 @@
 Javanews.sln
 backend/node_modules
 *.njsproj*
-*.package-lock.json
+package-lock.json
