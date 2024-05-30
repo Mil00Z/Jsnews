@@ -43,19 +43,19 @@
 
     <main class="container">
         <h1>Contactez nous !</h1>
-        <div class="form row">
+        <form class="form row" name="contact">
             <div class="form-group col-12">
-                <label>E-mail</label>
-                <input type="email" name="mail" class="form-control" placeholder="jean.dupond@mail.fr">
+                <label for="email">E-mail</label>
+                <input type="email" name="mail" class="form-control" placeholder="jean.dupond@mail.fr" id="email" required>
             </div>
             <div class="form-group col-12">
-                <label>Votre message</label>
-                <textarea name="message" class="form-control" rows="5"></textarea>
+                <label for="message">Votre message</label>
+                <textarea name="message" id="message" class="form-control" rows="5" required ></textarea>
             </div>
             <div class="form-group col-12">
-                <input type="button" class="btn btn-primary col-12" value="envoyer">
+                <input type="submit" class="btn btn-primary col-12 submiter" value="envoyer">
             </div>
-        </div>
+        </form>
     </main>
 
     <footer>
