@@ -13,6 +13,9 @@
     --card-body-font-size:1.25rem;
     --card-header-title-font-size:1.85rem;
     --toggle-favoris-color:yellow;
+    --message-confirmation:var(--teal);
+
+    --input-radius:.25rem;
 
 }
 
@@ -31,6 +34,20 @@ body{
 h1{
     font-size: 150%;
     text-align: center;
+}
+.success {
+    margin-block:5vh;
+    padding:10px;
+    background-color: var(--message-confirmation);
+    color:var(--white);
+    border-radius: var(--input-radius);
+}
+
+
+form[name="contact"]{
+
+    justify-content: center;
+
 }
 
 /* List Container */
