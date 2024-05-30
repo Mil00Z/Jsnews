@@ -17,8 +17,11 @@ console.log(`Is Page => '${currentPage}'`);
     e.preventDefault();
 
     // const submitTrigger = e.submitter;
-  
+
+
     if(!emailCheck(emailInput) | !messageCheck(messageInput) ){
+
+
 
         console.warn('Form Validation Wrong');
 
@@ -49,6 +52,8 @@ function emailCheck(inputElement) {
         const pattern = "[A-Za-z0-9\._%+\-]+@[A-Za-z0-9\.\-]+\.[A-Za-z]{2,}";
         const regEx = new RegExp(pattern);
 
+
+       //Custom Testing Flow + Browser 
         if (regEx.test(inputValue)) {
 
             console.log(`GOOD Value of Email => ${inputValue}`);
@@ -62,6 +67,27 @@ function emailCheck(inputElement) {
             return false;
         }
 
+
+        // API VAlidation Ideas : the browser doing this without script ?!
+        // if (inputElement.checkValidity()){
+
+        //     console.log(`GOOD Value of Email => ${inputValue}`);
+
+        //     return true;
+
+        // } else {
+
+        //     let newWarning = document.createElement('div');
+        //     newWarning.innerHTML = inputElement.validationMessage;
+
+        //     document.body.append(newWarning);
+
+        //     console.error(`BAD Value of  Email => ${inputValue}`);
+
+        //     return false;
+
+        // }
+
     }
 }
 
@@ -71,6 +97,7 @@ function messageCheck(inputElement) {
 
         let inputValue = inputElement?.value;
 
+        //Custom Testing Flow + Browser 
         const minimalLength = 5 ;
 
         if (inputValue.length > minimalLength) {
@@ -85,6 +112,27 @@ function messageCheck(inputElement) {
             
             return false;
         }
+
+
+          // API VAlidation Ideas : the browser doing this without script ?!
+        // if (inputElement.checkValidity()) {
+
+        //     console.log(`GOOD Value of Message => ${inputValue}`);
+
+        //     return true;
+
+        // } else {
+
+        //     let newWarning = document.createElement('div');
+        //     newWarning.innerHTML = inputElement.validationMessage;
+
+        //     document.body.append(newWarning);
+
+        //     console.error(`BAD Value of Message => ${inputValue}`);
+            
+        //     return false;
+
+        // }
 
     }
 }
